@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react'
 import BeerImage from '../../components/BeerImage/BeerImage';
 import './BeerImageList.scss'
 
-const BeerImageList = ({beerArr}) => {
-    const[userArr, setUserArr] = useState([]);
+const BeerImageList = () => {
+    const[beerArr, setBeerArr] = useState([]);
     const [userRange, setUserRange] = useState(25);
     
 
@@ -13,13 +13,13 @@ const BeerImageList = ({beerArr}) => {
         .then((response) => response.json())
         .then((userObjects)=>{
             console.log(userObjects);
-            setUserArr(userObjects.results);
+            setBeerArr(userObjects);
         });
     },[userRange])
 
     console.log("after fetch");
-    const beerImagesJSX = beerArr.map((beer) =>{
-        return <BeerImage key={"beer" + beer.id} name={beer.name} image_url={beer.image_url}/>
+    const beerImagesJSX = beerArr.map((theBeer) =>{
+        return <BeerImage key={"beer" + theBeer.id} name={theBeer.name} image_url={theBeer.image_url}/>
     })
     
   return (
