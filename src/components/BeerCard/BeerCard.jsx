@@ -1,11 +1,11 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 
 const BeerCard = ({ beerArr }) => {
   const { name } = useParams();
 
   const theBeer = beerArr.find((beers) => {
-    return beers.name == name;
+    return beers.name === name;
   });
 
   const generateImage = (beer) => {

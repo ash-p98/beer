@@ -4,7 +4,7 @@ import './BeerImageList.scss'
 
 const BeerImageList = () => {
     const[beerArr, setBeerArr] = useState([]);
-    const [userRange, setUserRange] = useState(25);
+    const [userRange] = useState(25);
     
 
     useEffect(()=> {
