@@ -1,0 +1,24 @@
+
+.poke-image-card {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    max-width: 200px;
+    width: 180px;
+    height: 180px;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: center;
+  
+    > .card__image {
+      transform: scale(1.1);
+      object-fit: cover;
+    }
+  
+    > .card__heading {
+      font-size: 1.5rem;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+  
