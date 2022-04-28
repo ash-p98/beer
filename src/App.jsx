@@ -3,7 +3,7 @@ import "./App.scss";
 import NavBar from "./containers/NavBar/NavBar";
 import BeerImageList from "./containers/BeerImageList/BeerImageList";
 
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import BeerCard from "./components/BeerCard/BeerCard";
 
 const App = () => {
@@ -20,7 +20,6 @@ const App = () => {
   };
 
   return (
-    <Router>
       <div className="">
         <NavBar
           searchTerm={searchTerm}
@@ -38,7 +37,6 @@ const App = () => {
           ></Route>{" "}
         </Routes>
       </div>
-    </Router>
   );
 };
 
