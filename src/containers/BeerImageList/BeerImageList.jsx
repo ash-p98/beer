@@ -9,7 +9,7 @@ const BeerImageList = () => {
 
     useEffect(()=> {
         console.log("in UseEffect");
-        fetch("https://api.punkapi.com/v2/beers")
+        fetch("https://api.punkapi.com/v2/beers?per_page=80")
         .then((response) => response.json())
         .then((userObjects)=>{
             console.log(userObjects);
