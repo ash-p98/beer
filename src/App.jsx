@@ -24,7 +24,7 @@ const App = () => {
         <NavBar
           searchTerm={searchTerm}
           searchTermChangeHandler={searchTermChangeHandler}
-        />
+        /> 
         <Routes>
           {" "}
           <Route

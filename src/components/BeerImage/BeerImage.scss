@@ -11,7 +11,10 @@
     text-align: center;
   
     > .card__image {
-      transform: scale(1.1);
+      transform: scale(1);
+      width: 40px;
+      justify-content: center;
+      display: flex;
       object-fit: cover;
     }
   
