@@ -4,7 +4,7 @@ import "./BeerImageList.scss";
 
 const BeerImageList = ({beerArr, buttonProp}) => {
 
-  const beerImagesJSX = beerArr.map((theBeer) => {
+  const beerImagesJSX = beerArr?.map((theBeer) => {
     return (
       <>
         <BeerImage

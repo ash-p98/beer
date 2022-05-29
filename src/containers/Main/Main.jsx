@@ -27,11 +27,11 @@ const Main = () => {
 
   console.log("after fetch");
 
-  //Serach box stuff
-  const filteredBeers = beerArr.filter((userObjects) => {
-    const beerName = userObjects.name.toLowerCase();
-    return beerName.includes(search);
-  });
+//   //Serach box stuff
+//   const filteredBeers = beerArr.filter((userObjects) => {
+//     const beerName = userObjects.name.toLowerCase();
+//     return beerName.includes(search);
+//   });
 
   const handleInput = (event) => {
     const input = event.target.value.toLowerCase();
@@ -81,7 +81,7 @@ const Main = () => {
         abv={abv}
         handleABVbox={handleABVbox}
       />
-      <BeerImageList beerArr={filteredBeers} buttonProp={togglePopup} />
+      <BeerImageList beerArr={beerArr} buttonProp={togglePopup} />
       {isOpen && <BeerPopup popBeerArr={popBeerArr} handleClose={togglePopup} />}
     </div>
   );
