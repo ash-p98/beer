@@ -1,35 +1,17 @@
 
 
 .search-box {
-    background-color: #eee;
 
     &__name-search {
         padding: 5px;
         font-size: 16px;
+        width: 5rem;
         border: 2px grey solid;
-        border-radius: 5px;
+        border-radius: 50px;
         color: black;
     
-        &:focus {
-          border: 2px grey solid;
-          outline: none;
-        }
-    
+
     }
 
-    &__fuzzy-ind {
-        padding: 10px 5px;
-        font-size: 16px;
-        color: black;
-    
-    }
-
-    label {
-        margin: 10px 2px;
-    }
-
-    &__results {
-        margin: 15px 2px;
-    }
 
 }

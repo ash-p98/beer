@@ -7,21 +7,19 @@ const SearchBox = ({
   searchResultsCount,
 }) => {
 
-    let searchResultText = `Found ${searchResultsCount} beers`
 
   return (
-  <div className="search-box">
-      <label htmlFor="searchBox">ByName:</label>
+  <form className="search-box">
+      <label htmlFor="searchBox"></label>
       <input 
       type="text" 
       id="searchBox"
       className="search-box__name-search"
-      placeholder="Name to search"
+      placeholder="Search"
       onChange={searchTermChangeHandler}
       value={searchTerm}
       />
-      <p className="search-bar__results">{searchResultText}</p>
-  </div>
+  </form>
   );
 };
 

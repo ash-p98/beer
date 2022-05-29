@@ -1,12 +1,11 @@
 @use "../../assets/sass/variables" as *;
 
-.poke-image-container {
-    
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    gap: 1rem;
-    justify-items: center;
-  
-  }
-
+.beer-image-container {
+  // border: 2px solid red;
+  width: 100%;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 50px;
+  justify-items: center;
+}
