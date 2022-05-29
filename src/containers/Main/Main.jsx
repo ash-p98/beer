@@ -3,7 +3,6 @@ import React from "react";
 import BeerImageList from "../BeerImageList/BeerImageList";
 import NavBar from "../NavBar/NavBar";
 import BeerPopup from "../../components/BeerPopup/BeerPopup";
-import BeerPopupList from "../BeerPopupList/BeerPopupList";
 
 const Main = () => {
   const [beerArr, setBeerArr] = useState([]);
@@ -62,13 +61,13 @@ const Main = () => {
     return beerArr.ph < 4;
   });
 
-  useEffect(() => {
-    if (abv === true && classic === false && acid === false) {
-      setBeerArr(highABV);
-    } else if (abv === false && classic === true && acid === false) {
-      setBeerArr(isClassicBeer);
-    }
-  });
+//   useEffect(() => {
+//     if (abv === true && classic === false && acid === false) {
+//       setBeerArr(highABV);
+//     } else if (abv === false && classic === true && acid === false) {
+//       setBeerArr(isClassicBeer);
+//     }
+//   });
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
