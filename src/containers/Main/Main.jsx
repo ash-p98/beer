@@ -3,9 +3,11 @@ import React from "react";
 import BeerImageList from "../BeerImageList/BeerImageList";
 import NavBar from "../NavBar/NavBar";
 import BeerPopup from "../../components/BeerPopup/BeerPopup";
+import BeerPopupList from "../BeerPopupList/BeerPopupList";
 
 const Main = () => {
   const [beerArr, setBeerArr] = useState([]);
+  const [popBeerArr, setPopBeerArr] = useState([]);
   const [checkBeer, setCheckBeer] = useState([]);
   const [search, setSearch] = useState("");
   const [abv, setabv] = useState(false);
@@ -20,6 +22,7 @@ const Main = () => {
       .then((userObjects) => {
         console.log(userObjects);
         setBeerArr(userObjects);
+        setPopBeerArr(userObjects);
       });
   }, []);
 
@@ -80,7 +83,7 @@ const Main = () => {
         handleABVbox={handleABVbox}
       />
       <BeerImageList beerArr={filteredBeers} buttonProp={togglePopup} />
-      {isOpen && <BeerPopup content={<><p>test</p></>} handleClose={togglePopup} />}
+      {isOpen && <BeerPopup popBeerArr={popBeerArr} handleClose={togglePopup} />}
     </div>
   );
 };
