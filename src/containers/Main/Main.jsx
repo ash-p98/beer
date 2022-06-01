@@ -7,11 +7,11 @@ import BeerPopup from "../../components/BeerPopup/BeerPopup";
 const Main = () => {
   const [beerArr, setBeerArr] = useState([]);
   const [popBeerArr, setPopBeerArr] = useState([]);
-  const [checkBeer, setCheckBeer] = useState([]);
+  // const [checkBeer, setCheckBeer] = useState([]);
   const [search, setSearch] = useState("");
-  const [abv, setabv] = useState(false);
-  const [classic, setClassic] = useState(false);
-  const [acid, setAcid] = useState(false);
+  // const [abv, setabv] = useState(false);
+  // const [classic, setClassic] = useState(false);
+  // const [acid, setAcid] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -33,33 +33,33 @@ const Main = () => {
 //     return beerName.includes(search);
 //   });
 
-  const handleInput = (event) => {
-    const input = event.target.value.toLowerCase();
-    setSearch(input);
-    console.log(input);
-  };
+  // const handleInput = (event) => {
+  //   const input = event.target.value.toLowerCase();
+  //   setSearch(input);
+  //   console.log(input);
+  // };
 
   //checkbox stuff
-  const handleABVbox = () => {
-    setabv(!abv);
-  };
-  const handeClassicbox = () => {
-    setClassic(!classic);
-  };
-  const handleAcidbox = () => {
-    setAcid(acid);
-  };
+  // const handleABVbox = () => {
+  //   setabv(!abv);
+  // };
+  // const handeClassicbox = () => {
+  //   setClassic(!classic);
+  // };
+  // const handleAcidbox = () => {
+  //   setAcid(acid);
+  // };
 
-  const highABV = checkBeer.filter((aBeer) => {
-    return aBeer.abv > 6;
-  });
-  const isClassicBeer = checkBeer.filter((aBeer) => {
-    const brewDate = aBeer.first_brewed.split("/")[1];
-    return brewDate < 2010;
-  });
-  const acidBeers = checkBeer.filter((aBeer) => {
-    return beerArr.ph < 4;
-  });
+  // const highABV = checkBeer.filter((aBeer) => {
+  //   return aBeer.abv > 6;
+  // });
+  // const isClassicBeer = checkBeer.filter((aBeer) => {
+  //   const brewDate = aBeer.first_brewed.split("/")[1];
+  //   return brewDate < 2010;
+  // });
+  // const acidBeers = checkBeer.filter((aBeer) => {
+  //   return beerArr.ph < 4;
+  // });
 
 //   useEffect(() => {
 //     if (abv === true && classic === false && acid === false) {
@@ -77,9 +77,9 @@ const Main = () => {
     <div>
       <NavBar
         search={search}
-        handleInput={handleInput}
-        abv={abv}
-        handleABVbox={handleABVbox}
+        // handleInput={handleInput}
+        // abv={abv}
+        // handleABVbox={handleABVbox}
       />
       <BeerImageList beerArr={beerArr} buttonProp={togglePopup} />
       {isOpen && <BeerPopup popBeerArr={popBeerArr} handleClose={togglePopup} />}
