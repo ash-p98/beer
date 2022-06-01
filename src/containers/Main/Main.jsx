@@ -8,7 +8,7 @@ const Main = () => {
   const [beerArr, setBeerArr] = useState([]);
   const [popBeerArr, setPopBeerArr] = useState([]);
   // const [checkBeer, setCheckBeer] = useState([]);
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
   // const [abv, setabv] = useState(false);
   // const [classic, setClassic] = useState(false);
   // const [acid, setAcid] = useState(false);
@@ -76,7 +76,7 @@ const Main = () => {
   return (
     <div>
       <NavBar
-        search={search}
+        // search={search}
         // handleInput={handleInput}
         // abv={abv}
         // handleABVbox={handleABVbox}
